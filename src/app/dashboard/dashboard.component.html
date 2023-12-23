@@ -1,0 +1,215 @@
+
+<p-panel>
+    <p-header [style]="{'display':'flex','justify-content':'space-between','width':'100%'}">
+        <div class="main-header">
+            <div class="header">
+                <!-- <p-button (click)="showSidebar = true" icon="pi pi-align-justify"></p-button>  -->
+                <img src="https://th.bing.com/th/id/OIP.lzGZWS2WsZ5oix9JcIboXQHaDM?w=295&h=150&c=7&r=0&o=5&pid=1.7">
+                <h3 style="text-align: center;margin: 0;padding: 5px;">System Monitoring</h3>
+            </div>
+
+            <div class="right-header">
+                <p>Questions 888-550-7512</p>
+            </div>
+        </div>
+    </p-header>
+</p-panel>
+<div class="tabview">
+    <p-tabView>
+        <p-tabPanel header="Live Status">
+            <p>
+            </p>
+        </p-tabPanel>
+        <p-tabPanel header="Graph">
+            <p>
+            </p>
+        </p-tabPanel>
+        <p-tabPanel header="Profile">
+            <p>
+            </p>
+        </p-tabPanel>
+    </p-tabView>
+    <div class="details">
+        <div class="sunny">
+            <img src="../../assets/sun.png"  style="height: 20px;" >
+            <div>
+                <p>Sunny 88&deg;F | Sunsent in 2hr 20min </p>
+            </div>
+            <p-button (click)="display = true" icon="pi pi-chevron-down"  styleClass="p-button-success"></p-button>
+        </div>
+    </div>
+</div>
+ <div class="dialog">
+    <p-dialog header="Weather" [(visible)]="display" [modal]="false" [position]="position" [style]="{ width: '25vw',position:'fixed',left:'72%',top:'20%' }" [draggable]="false" [resizable]="false">
+        <p>
+           <app-weather></app-weather>
+        </p>
+    </p-dialog>
+</div>
+<div class="productionCard">
+    <p-card header="">
+        <p class="m-0">
+          <div class="productionReports">
+            <div style="background-color: white;border-radius:5px;padding: 5px;align-items: center;">
+                <p style="text-align: center;">Today</p>
+                <p style="color: rgb(21, 155, 50);">40.5kWh</p>
+            </div>
+            <div>
+                <p  style="text-align: center;">Monthly</p>
+                <p  style="color: rgb(21, 155, 50);">648.5kWh</p>
+            </div>
+            <div>
+                <p  style="text-align: center;">Annually</p>
+                <p  style="color: rgb(21, 155, 50);">1.35kWh</p>
+            </div>
+            <div>
+                <p style="text-align: center;">Lifetime</p>
+                <p  style="color: rgb(21, 155, 50);">5.32kWh</p>
+            </div>
+          </div>
+            <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"></highcharts-chart>
+       
+    </p-card>
+</div>
+  <div>
+    <div class="p-card1">
+        <p-card class="card1">
+            <p class="m-0">
+            <div style="display: flex;justify-content: space-between;">
+                <div>
+                    <highcharts-chart [Highcharts]="Highcharts" [options]="doughnutChart"></highcharts-chart>
+                </div>
+                <div style="display: flex;flex-direction: column;padding-top: 60px;width: 100%;">
+                    <div style="display: flex;padding-top: 10px;justify-content: center;align-items: center;">
+
+                        <img src="../../assets/solar-rts-icon.svg"
+                            style="height: 30px;padding-left: 0;">
+                        <div style="padding-left: 5px;">
+                            <p>From Solars</p>
+                            <p style="color: #bcbc19eb;">55%</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex;padding-top: 10px;justify-content: center;align-items: center;">
+
+                        <img src="../../assets/battery-rts-icon.svg"
+                            style="height: 30px;padding-left: 0;">
+                        <div style="padding-left: 5px;">
+                            <p>From Battery</p>
+                            <p style="color: #87d94beb;">40%</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex;padding-top: 10px;justify-content: center;align-items: center;">
+
+                        <img src="../../assets/grid-rts-icon.svg"
+                            style="height: 30px;padding-left: 0;">
+                        <div style="padding-left: 10px;">
+                            <p>From Grid</p>
+                            <p style="color: #284388eb;">5%</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </p-card>
+    </div>
+     <div class="p-card2">
+        <p-card header="System Size">
+            <p class="m-0">
+            <div>
+                <highcharts-chart [Highcharts]="Highcharts" [options]="semiDoughnutChart"></highcharts-chart>
+                <div class="leftSemiDougnet">
+                    <p>0kwh</p>
+                 </div>
+                 <div class="rightDougnet">
+                    <p>12kwh</p>
+                 </div>
+            </div>
+            
+        </p-card>
+    </div>
+</div> 
+ <div class="systemStatus">
+    <p-card header="System Status">
+        <p class="m-0">
+        <div class="status">
+            <div style="display: flex;flex-direction: column;">
+                <img src="../../assets/battery-rts-icon.svg" style="padding: 0;margin: 0;">
+
+                <div style="display: flex;
+                flex-direction: column;
+                align-items: center;">
+                    <p style="margin: 0;font-size: 15px;text-align: center;font-weight: 900;"> Battery</p>
+                    <p style="margin: 0;font-size: 10px;text-align: center;color: rgb(134, 132, 132);font-weight: 400">
+                        Not intsalled</p>
+                </div>
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <img src="../../assets/solar-rts-icon.svg" style="padding: 0;margin: 0;">
+
+                <div style="    display: flex;
+                flex-direction: column;
+                align-items: center;">
+                    <p style="margin: 0;font-size: 15px;text-align: center;font-weight: 900;"> Solar</p>
+                    <p
+                        style="margin: 0;font-size: 10px;text-align: center;color:rgb(37, 230, 37);font-weight: 400;text-align: center;">
+                        Online</p>
+                </div>
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <img src="../../assets/inverter-rts-icon.svg" style="padding: 0;margin: 0;">
+
+                <div style="    display: flex;
+                flex-direction: column;
+                align-items: center;">
+                    <p style="margin: 0;font-size: 15px;text-align: center;font-weight: 900;">Inverters</p>
+                    <p style="margin: 0;font-size: 10px;text-align: center;color: red;font-weight: 400">
+                        Outage</p>
+                </div>
+            </div>
+        </div>
+    </p-card>
+</div>
+<div class="sidebar">
+    <ul class="nav flex-column">
+        <li>
+            <i style="font-size: 1.5rem" class="pi pi-align-justify sidebars"></i>
+        </li>
+        <li> <i class="pi pi-home" style="font-size: 1.5rem"></i></li>
+        <li><i class="pi pi-envelope" style="font-size: 1.5rem"></i></li>
+        <li> <i class="pi pi-cog" style="font-size: 1.5rem"></i>
+        </li>
+    </ul>
+</div>
+<div class="lifeTimeCard">
+    <p-card header="">
+        <p class="m-0">
+        <div style="align-items: center;">
+            <img src="https://cdn-icons-png.flaticon.com/128/4523/4523627.png"
+                style="padding: 0;margin: 0;margin-left: 50px;">
+        </div>
+        <div style="    display: flex;
+        flex-direction: column;
+        align-items: center;">
+            <p style="margin: 0;font-size: 15px;text-align: center;font-weight: 700;">Lifetime Savings</p>
+            <p style="margin: 0;font-size: 25px;text-align: center;color: white;font-weight: 700">$124.00</p>
+        </div>
+    </p-card>
+</div>
+<div class="co2TimeCard">
+    <p-card header="">
+        <p class="m-0">
+        <div style="align-items: center;">
+            <img src="https://cdn-icons-png.flaticon.com/128/861/861054.png"
+                style="padding: 0;margin: 0;margin-left: 50px;">
+        </div>
+        <div style="    display: flex;
+        flex-direction: column;
+        align-items: center;">
+            <p style="margin: 0;font-size: 15px;text-align: center;font-weight: 700;">CO2 Redcution</p>
+            <p style="margin: 0;font-size: 25px;text-align: center;color: white;font-weight: 700">4305.6<span
+                    style="font-size: 10px;">lbs</span></p>
+        </div>
+    </p-card>
+</div>    

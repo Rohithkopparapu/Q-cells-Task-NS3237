@@ -1,0 +1,49 @@
+
+    <p class="m-0">
+        <div class="weatherCard">
+            <div class="date">
+               <img src="https://cdn-icons-png.flaticon.com/128/9575/9575976.png" style="height: 30px;padding: 5px;">
+               <p style="padding-left:15px ;">{{dayOfWeek}} {{date}} | {{formattedTime}}</p>
+            </div>
+            <div class="loocation">
+                <img src="https://cdn-icons-png.flaticon.com/128/927/927667.png" style="height: 30px;padding: 5px;">
+               <p style="padding-left:15px ;">{{location}}</p>
+            </div>
+            <div class="temprature">
+                <img src="https://cdn-icons-png.flaticon.com/128/4814/4814268.png" style="height: 50px;padding: 5px;">
+                <div style="padding: 5px;">
+                    <p style="font-size: 30px;font-weight: 500;">{{currentTemp}}&deg;F</p>
+                    <p>{{minTemp}}&deg; - {{maxTemp}}&deg;F  {{tempratureRef}}</p>
+                </div>
+            </div>
+            <div class="sunrise">
+                <p><span>Sunrise</span>:{{sunriseTime}}</p>
+                <p style="padding-left: 5px;">| <span>Sunset</span>:{{sunsetTime}}</p>
+            </div>
+            <div class="threeDaysTemp">
+                <div class="today">
+                   <div style="text-align: center;">
+                    <p >{{dayOfWeek}}</p>
+                    <img src="https://cdn-icons-png.flaticon.com/128/4814/4814268.png" style="height: 50px;padding: 5px;">
+                   </div>
+                    <p  style="font-size: 10px;">{{minTemp}}&deg;-{{maxTemp}}&deg;F </p>
+                </div>
+                <div class="today">
+                   <div style="text-align: center;">
+                    <p>{{nextTwoDays[0].dayOfWeek}}</p>
+                    <img src="https://cdn-icons-png.flaticon.com/128/2204/2204356.png" style="height: 50px;padding: 5px;">
+                   </div>
+                   <p  style="font-size: 10px;">{{minTemp}}&deg;-{{maxTemp}}&deg;F</p>
+                </div>
+                <div class="today">  
+                    <div style="text-align: center;">
+                        <p>{{nextTwoDays[1].dayOfWeek}}</p>
+                        <img src="https://cdn-icons-png.flaticon.com/128/2204/2204356.png" style="height: 50px;padding: 5px;">
+                    </div>
+                    <p  style="font-size: 10px;">{{minTemp}}&deg;-{{maxTemp}}&deg;F </p>
+                </div>
+
+            </div>
+        </div>
+   
+<!-- </p-card><p-card header=""></p-card> -->
