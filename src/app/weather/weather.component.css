@@ -1,0 +1,52 @@
+.weatherCard{
+    
+}
+.date{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+.loocation{
+    display: flex;
+   box-sizing: border-box;
+    align-items: center;
+   
+}
+.temprature{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.sunrise{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(116 109 109 / 14%);;
+    border-radius: 6px;
+    text-align: center;
+    width: fit-content;
+    margin: 5px;
+}
+span{
+    font-size: 15px;
+    font-weight: 700;
+}
+.threeDaysTemp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.today{
+    padding: 10px;
+}
+::ng-deep .p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button{
+    color: black;
+    background-color: white;
+    border: none;
+    padding: revert;
+}

@@ -1,0 +1,96 @@
+.focused {
+    border-color: red; /* Set the desired border color */
+  }
+
+  span
+  {
+    color: red;
+    padding: 5px;
+    text-align: start;
+  }/* Your component styles */
+.password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-visible {
+    -webkit-text-security: none; /* For Safari */
+    /* For Firefox */
+  }
+  
+  .pi-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  
+
+.p-password {
+    position: relative;
+    display: inline-flex;
+    width: 100% !important;
+    
+}
+
+.p-input-icon-right > .p-inputtext {
+    width: 100% !important;
+    padding-right: 2.5rem;
+}
+
+
+.password-container{
+   
+    padding: 20px;
+}
+::ng-deep .p-password.p-component{
+    width: 100%;
+  
+}
+::ng-deep .p-password.p-component .p-inputtext{
+    width: 100%;
+  
+}
+::ng-deep .p-panel .p-panel-header
+{
+    background-color: white;
+}
+
+.p-mail{
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+}
+label{
+    padding: 5px;
+    text-align:start;
+}
+input{
+    width: 100%;
+}
+
+img{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.password-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.forgotandlogin{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 90%;
+}
+a{
+    padding-top: 13px;
+    padding-left: 25px;
+    color: black;
+}
